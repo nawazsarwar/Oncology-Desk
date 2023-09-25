@@ -1,0 +1,47 @@
+@extends('layouts.admin')
+@section('content')
+
+<div class="card">
+    <div class="card-header">
+        {{ trans('global.show') }} {{ trans('cruds.patientEducationLevel.title') }}
+    </div>
+
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-group">
+                <a class="btn btn-default" href="{{ route('admin.patient-education-levels.index') }}">
+                    {{ trans('global.back_to_list') }}
+                </a>
+            </div>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.patientEducationLevel.fields.id') }}
+                        </th>
+                        <td>
+                            {{ $patientEducationLevel->id }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.patientEducationLevel.fields.title') }}
+                        </th>
+                        <td>
+                            {{ $patientEducationLevel->title }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <a class="btn btn-default" href="{{ route('admin.patient-education-levels.index') }}">
+                    {{ trans('global.back_to_list') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@endsection
